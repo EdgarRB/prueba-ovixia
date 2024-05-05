@@ -1,30 +1,40 @@
-# React + TypeScript + Vite
+# Prueba Ovixia
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Prueba tecnica en la que mostramos 2 pantallas, la primera muestra una lista con los 151 primeros Pokemon y la segunda
+una página de detalle accesible al clickar en las imagenes de los pokemon
 
-Currently, two official plugins are available:
+## Requisitos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Antes de poder ejecutar el proyecto es necesario tener los siguientes programas instalados
 
-## Expanding the ESLint configuration
+- Node.js 
+- npm
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Instalacion
 
-- Configure the top-level `parserOptions` property like this:
+sigue los siguientes pasos para poder ejecutar la aplicación
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+1. Clona el repositorio:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+   ```
+   git clone https://github.com/EdgarRB/prueba-ovixia.git
+   ```
+
+2. Accede al proyecto a traves del terminal que prefieras, en mi caso usando el terminal de vs code
+![imagen](https://github.com/EdgarRB/prueba-ovixia/assets/52667125/96dab512-c456-4dc6-95b6-034db541b371)
+
+3. Instala las dependencias:
+
+  ```
+   npm install
+  ```
+
+4. Arranca el proyecto
+  ```
+  npm run dev
+  ```
+5. Abre el navegador en la url que muestra el terminal, en mi caso:
+
+![imagen](https://github.com/EdgarRB/prueba-ovixia/assets/52667125/4b72d6c0-3e4a-4377-b8d9-b801c612b68d)
+
+
