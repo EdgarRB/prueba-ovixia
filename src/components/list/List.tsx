@@ -21,14 +21,14 @@ const List = () => {
       pokemon.name.toLowerCase().includes(searchQuery.toLowerCase())
     );
 
-    if (filteredResults.length > 0) {
-      return (
-        <Box className={Styles.box}>
-          <Typography variant="h4" fontWeight="600" gutterBottom>
-            Pokedex
-          </Typography>
+    return (
+      <Box className={Styles.box}>
+        <Typography variant="h4" fontWeight="600" gutterBottom>
+          Pokedex
+        </Typography>
 
-          <SearchComponent setSearchQuery={setSearchQuery} />
+        <SearchComponent setSearchQuery={setSearchQuery} />
+        {filteredResults.length > 0 ? (
           <Grid className={Styles.grid} container spacing={2}>
             {filteredResults.map((pokemon: CommonInterface) => (
               <Grid item key={pokemon.name} xs={12} sm={6} xl={3} lg={4}>
@@ -36,16 +36,9 @@ const List = () => {
               </Grid>
             ))}
           </Grid>
-        </Box>
-      );
-    }
-    return (
-      <Box className={Styles.box}>
-        <Typography variant="h4" fontWeight="600" gutterBottom>
-          Pokedex
-        </Typography>
-        <SearchComponent setSearchQuery={setSearchQuery} />
-        <NoResults />
+        ) : (
+          <NoResults />
+        )}
       </Box>
     );
   }
