@@ -1,7 +1,7 @@
 # Prueba Ovixia
 
-Prueba tecnica en la que mostramos 2 pantallas, la primera muestra una lista con los 151 primeros Pokemon y la segunda
-una página de detalle accesible al clickar en las imagenes de los pokemon
+Prueba técnica en la que mostramos 2 pantallas, la primera muestra una lista con los 151 primeros Pokemon y la segunda
+una página de detalle accesible al clickar en las imágenes de los pokemon
 
 ## Requisitos
 
@@ -10,7 +10,7 @@ Antes de poder ejecutar el proyecto es necesario tener los siguientes programas 
 - Node.js 
 - npm
 
-## Instalacion
+## Instalación
 
 sigue los siguientes pasos para poder ejecutar la aplicación
 
@@ -20,7 +20,7 @@ sigue los siguientes pasos para poder ejecutar la aplicación
    git clone https://github.com/EdgarRB/prueba-ovixia.git
    ```
 
-2. Accede al proyecto a traves del terminal que prefieras, en mi caso usando el terminal de vs code
+2. Accede al proyecto a través del terminal que prefieras, en mi caso usando el terminal de vs code
 ![imagen](https://github.com/EdgarRB/prueba-ovixia/assets/52667125/96dab512-c456-4dc6-95b6-034db541b371)
 
 3. Instala las dependencias:
