@@ -3,8 +3,8 @@ import useEvolutionDataApi from '../../../api/useEvolutionApi';
 import useSpeciesDataApi from '../../../api/useSpeciesApi';
 import { EvoChain, Evolution } from '../../../model/Evolution';
 import { Pokemon } from '../../../model/Pokemon';
-import LoadingPage from '../../loading/LoadingPage';
 import CardDetail from '../../list/card/CardDetail';
+import CardSkeleton from '../../list/card/CardSkeleton';
 
 interface EvolutionProps {
   pokemon: Pokemon;
@@ -15,7 +15,7 @@ const Evolutions = ({ pokemon }: EvolutionProps) => {
 
   const evoChain = species?.evolution_chain.url;
 
-  const { status, fetchStatus, error, data } = useEvolutionDataApi(evoChain);
+  const { status, isFetching, error, data } = useEvolutionDataApi(evoChain);
 
   const extractSpeciesNames = (evolutions: Evolution) => {
     const names: string[] = [];
@@ -52,8 +52,14 @@ const Evolutions = ({ pokemon }: EvolutionProps) => {
     return names.filter((name: string) => name !== pokemon.name);
   };
 
-  if (status === 'pending' || fetchStatus === 'fetching')
-    return <LoadingPage />;
+  if (status === 'pending' || isFetching)
+    return (
+      <Grid container direction="row" spacing={2}>
+        <Grid item xs={12} sm={6} xl={4} lg={6}>
+          <CardSkeleton />
+        </Grid>
+      </Grid>
+    );
   if (status === 'error') return <div> {error.message}</div>;
   if (status === 'success') {
     const evoList = extractSpeciesNames(data);
