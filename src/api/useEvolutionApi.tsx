@@ -7,6 +7,7 @@ const useEvolutionDataApi = (url?: string) => {
     queryKey: ['EvolutionData'],
     queryFn: async (): Promise<Evolution> => FetchFunction(url ?? ''),
     enabled: !!url,
+    gcTime: 0,
   });
 };
 
